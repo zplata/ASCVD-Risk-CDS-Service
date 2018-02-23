@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ascvd-risk-service",
+    "title": "ASCVD Risk Service",
+    "description": "Determine if a provider should run the ASCVD Risk Score SMART Application",
+    "hook": "patient-view",
+    "prefetch": {
+      "patient": "Patient/{{Patient.id}}",
+      "cholesterol": "Observation?patient={{Patient.id}}&code=http://loinc.org|14647-2,http://loinc.org|2093-3"
+    }
+  }
+]
